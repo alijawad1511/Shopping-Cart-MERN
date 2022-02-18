@@ -45,7 +45,7 @@ router.post('/additem', async (req, res) => {
 
 
 //@route    DELETE api/items/additem
-//@desc     Add an Item in Cart
+//@desc     Delete an Item from the Cart
 //@access   Public
 router.delete('/deleteitem/:id', async (req, res) => {
 	try {
