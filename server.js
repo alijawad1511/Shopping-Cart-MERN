@@ -13,10 +13,10 @@ mongoose.connect('mongodb://localhost:27017/Shopping-Cart')
     .then(() => console.log('Connected to MongoDB Successfully...'))
     .catch((err) => console.log("Error : ", err));
 
-// Home Page Route (Backend Testing)
-app.get('/', (req, res) => {
-    res.status(200).json({message: "App running successfully"})
-})
+// Route Files
+const items = require('./routes/api/items');
+app.use('/api/items', items);
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => { console.log(`Shopping App Backend running at http://localhost:${PORT}`); });
