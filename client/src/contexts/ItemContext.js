@@ -48,7 +48,8 @@ export const ItemProvider = (props) => {
         });
 
         const json = await response.json();
-        console.log(json);
+        const updatedItems = items.filter((json) => { return json._id !== itemId });
+        setItems(updatedItems);
     }
 
     return (

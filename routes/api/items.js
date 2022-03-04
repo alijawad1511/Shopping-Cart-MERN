@@ -55,8 +55,8 @@ router.delete('/deleteItem/:id',async (req,res) => {
 		// If Item not found
 		if (!item) { return res.status(404).json({ error: "Item note found in the Cart" }) }
 
-		const result = await item.remove();
-		res.status(200).json({ success: true });
+		const deletedItem = await item.remove();
+		res.status(200).json(deletedItem);
 
 
 
