@@ -6,10 +6,10 @@ const Item = require('../../models/Item');
 //@route    GET api/items/useritems
 //@desc     Fetch User Notes
 //@access   Public
-router.get('/useritems', async (req, res) => {
+router.get('/useritems',async (req,res) => {
 	try {
-		
-		const items = await Item.find().sort({date: -1}); // Sort in Descending according to Date 
+
+		const items = await Item.find().sort({ date: -1 }); // Sort in Descending according to Date 
 		res.status(200).json(items);
 
 	} catch (error) {
@@ -24,7 +24,7 @@ router.get('/useritems', async (req, res) => {
 //@route    POST api/items/additem
 //@desc     Add an Item in Cart
 //@access   Public
-router.post('/additem', async (req, res) => {
+router.post('/additem',async (req,res) => {
 	try {
 
 		const { name } = req.body;
@@ -47,16 +47,16 @@ router.post('/additem', async (req, res) => {
 //@route    DELETE api/items/additem
 //@desc     Delete an Item from the Cart
 //@access   Public
-router.delete('/deleteitem/:id', async (req, res) => {
+router.delete('/deleteItem/:id',async (req,res) => {
 	try {
-		
+
 		const item = await Item.findById(req.params.id);
-		
+
 		// If Item not found
 		if (!item) { return res.status(404).json({ error: "Item note found in the Cart" }) }
 
 		const result = await item.remove();
-		res.status(200).json({ success: true});
+		res.status(200).json({ success: true });
 
 
 
