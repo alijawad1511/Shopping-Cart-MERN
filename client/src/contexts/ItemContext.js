@@ -6,8 +6,7 @@ export const ItemProvider = (props) => {
 
     const HOST = 'http://localhost:5000';
 
-    const initialItems = [];
-    const [items,setItems] = useState(initialItems);
+    const [items,setItems] = useState([]);
 
     const getAllItems = async () => {
 

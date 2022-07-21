@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
+require('./config/db')
 const cors = require('cors');
 const path = require('path');
-
 
 const app = express();
 
@@ -10,13 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// DB Config
-const db = require('./config/keys').mongoURI;
-
-// MongoDB Connection
-mongoose.connect(db)
-    .then(() => console.log('Connected to MongoDB Successfully...'))
-    .catch((err) => console.log("Error : ",err));
 
 // Route Files
 const items = require('./routes/api/items');
