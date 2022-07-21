@@ -1,8 +1,8 @@
 # MERN Shopping Cart
 
-> Shopping Cart built using MERN Stack
+Shopping Cart built using MERN Stack to add Shopping Items in List
 
-<img src="https://github.com/alijawad1511/eCinema-REACTJS/blob/master/src/images/sample1.jpg" width="800" />
+<img src="https://github.com/alijawad1511/Shopping-Cart-MERN/blob/master/client/src/images/Screenshot.jpg" width="800" />
 
 ## Quick Guide
 
