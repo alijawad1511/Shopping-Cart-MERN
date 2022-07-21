@@ -1,8 +1,11 @@
 # MERN Shopping Cart
+
 > Shopping Cart built using MERN Stack
 
+<img src="https://github.com/alijawad1511/eCinema-REACTJS/blob/master/src/images/sample1.jpg" width="800" />
 
 ## Quick Guide
+
 ```bash
 # Install Dependencies for Client
 npm run client-install
@@ -23,13 +26,11 @@ npm run server
 # Server runs on : http://httplocalhost:5000
 ```
 
-
 ## App Info
 
 ### Author
 
 Jawad Bukhari
-
 
 ### Version
 
